@@ -2,3 +2,11 @@
 import wandb
 
 wandb.login(key="20213f70b4dfae308af0d7be332b88191ea99653")  # Replace with your actual API key
+
+from ultralytics import YOLO
+
+# Load a pretrained YOLO11 segment model
+model = YOLO("yolo11n-seg.pt")
+
+# Train the model
+results = model.train(data="path/to/your_dataset.yaml", epochs=100, imgsz=640)
