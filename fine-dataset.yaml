@@ -1,0 +1,17 @@
+# yolov11_segmentation.yaml
+
+path: _data  # Root directory of the dataset
+
+train: images/train  # Relative to 'path'
+val: images/val       # Relative to 'path'
+# test: images/test     # (Optional) Relative to 'path'
+
+# Number of classes (optional in some versions if names are provided)
+nc: 5
+
+names:
+  0: Zetmeel
+  1: Groenten
+  2: Vlees/Vis
+  3: Saus
+  4: Samengesteld
