@@ -1,7 +1,7 @@
 # Weights and Biases integration for tracking experiments
-import wandb
+#import wandb
 
-wandb.login(key="20213f70b4dfae308af0d7be332b88191ea99653")  # Replace with your actual API key
+#wandb.login(key="20213f70b4dfae308af0d7be332b88191ea99653")  # Replace with your actual API key
 
 from ultralytics import YOLO
 
@@ -9,4 +9,4 @@ from ultralytics import YOLO
 model = YOLO("yolo11n-seg.pt")
 
 # Train the model
-results = model.train(data="path/to/your_dataset.yaml", epochs=100, imgsz=640)
+results = model.train(data="fine-dataset.yaml", epochs=100, batch=16, imgsz=640, save=True)
