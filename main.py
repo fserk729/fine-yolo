@@ -9,4 +9,4 @@ from ultralytics import YOLO
 model = YOLO("yolo11n-seg.pt")
 
 # Train the model
-results = model.train(data="fine-dataset.yaml", epochs=100, batch=16, imgsz=640, save=True)
+results = model.train(data="fine-dataset.yaml", epochs=100, batch=16, imgsz=640, save=True, device=0, project="yolo11-fine", name="test-train-1", exist_ok=False)
